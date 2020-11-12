@@ -18,6 +18,7 @@ body {
     background-color: yellow;
 }
 
+/* parte destra */
 .container .left {
     width: 35%;
     height: 100%;
@@ -25,9 +26,45 @@ body {
     float: left;
 }
 
+.lista-messaggi li{
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid grey;
+    padding: 20px;
+    list-style: none;
+}
+
+.lista-messaggi input{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+}
+
+.lista-messaggi img{
+    max-width: 50px;
+}
+
+/* parte sinistra */
 .container .right {
     width: 65%;
     height: 100%;
     background-color: lightblue;
     float: left;
+}
+
+.messaggi {
+    padding: 20px;
+    margin-bottom: 10px;
+    clear: both;
+    border-radius: 10px;
+}
+
+.ricevuti {
+    background-color: white;
+    float: left;
+}
+
+.inviati {
+    background-color: lightgreen;
+    float: right;
 }

@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(217, 218,214,1) 85%, rgba(0,151,135,1) 70%);
+}
+
+.container {
+    width: 1000px;
+    height: 700px;
+    background-color: yellow;
+}
+
+.container .left {
+    width: 35%;
+    height: 100%;
+    background-color: pink;
+    float: left;
+}
+
+.container .right {
+    width: 65%;
+    height: 100%;
+    background-color: lightblue;
+    float: left;
+}

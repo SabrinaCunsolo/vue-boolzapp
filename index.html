@@ -1,6 +1,8 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -13,37 +15,37 @@
                     <div class="left">
                         <ul class="lista-messaggi">
                             <li>
+                                <!-- mia icona -->
                                 <img src="https://icon-library.com/images/hacker-icon-png/hacker-icon-png-5.jpg" alt="">
-                                ciao
                                 <i class="fas fa-circle-notch"></i>
                                 <i class="fas fa-comment-alt"></i>
                                 <i class="fas fa-ellipsis-v"></i>
                             </li>
                             <input type="text" placeholder="Cerca o inizia una nuova chat">
-                            <div class="friends-list" v-for="(friend, indice) in contacts">
+                            <div class="friends-list" v-for="(friend, index) in contacts" @click="clickFriend(index)">
                                 <li>
-                                    <img :src="friend.avatar" alt="avatar">
-                                    ciao
+                                    <a href="#">
+                                        <img :src="friend.avatar" alt="avatar">
+                                    </a>
                                 </li>
+                                <h4>{{ friend.name }}<h4>
                             </div>
-
                         </ul>
                     </div>
                     <!-- destra -->
                     <div class="right">
                         <div class="right-top">
-                            <img src="https://www.shareicon.net/data/256x256/2016/09/15/829471_user_512x512.png" alt="">
+                            <img :src="contacts[contactFriend].avatar" alt="">
+                            <h4> {{contacts[contactFriend].name}} </h4>
+                            <h5>Ultimo accesso oggi alle 15:40</h5>
                             <i class="fas fa-search"></i>
                             <i class="fas fa-paperclip"></i>
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                         <div class="right-middle">
-                            <div class="messaggi">
-                                <div class="messaggi inviati">ciao1</div>
-                                <div class="messaggi ricevuti">ciao2</div>
-                                <div class="messaggi ricevuti">ciao2ciao2ciao2ciao2</div>
-                                <div class="messaggi inviati">ciao1</div>
-                            </div>
+                            <div class="messaggi" v-for="dati in contacts[contactFriend].messages">
+                                <div :class="dati.status">
+                            {{ dati.message}} </div>
                         </div>
                         <div class="right-bottom">
                             <i class="far fa-smile"></i>

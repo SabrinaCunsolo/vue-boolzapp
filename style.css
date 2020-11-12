@@ -9,7 +9,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0deg, rgba(217, 218,214,1) 85%, rgba(0,151,135,1) 70%);
+    background: linear-gradient(0deg, rgba(217, 218,214,1) 85%, rgba(0,151,135,1) 85%);
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -40,6 +41,11 @@ body {
     display: flex;
     align-items: center;
 }
+
+/* da sistemare dopo:hover su img */
+/* .lista-messaggi li :hover {
+    background-color: grey;
+} */
 
 .lista-messaggi input{
     width: 100%;
@@ -119,12 +125,12 @@ body {
     border-radius: 10px;
 }
 
-.ricevuti {
+.received {
     background-color: white;
     float: left;
 }
 
-.inviati {
+.sent {
     background-color: lightgreen;
     float: right;
 }

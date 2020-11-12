@@ -2,9 +2,10 @@ var app = new Vue(
     {
         el: '#root',
         data: {
+            contactFriend: 0,
             contacts: [
                 {
-                    name: 'Michele',
+                    name: 'Michela',
                     avatar: 'https://www.shareicon.net/data/256x256/2016/09/15/829471_user_512x512.png',
                     visible: true,
                     messages: [
@@ -26,7 +27,7 @@ var app = new Vue(
                     ],
                 },
                 {
-                    name: 'Fabio',
+                    name: 'Fabiana',
                     avatar: 'https://www.shareicon.net/data/256x256/2016/09/15/829446_user_512x512.png',
                     visible: true,
                     messages: [
@@ -48,7 +49,7 @@ var app = new Vue(
                     ],
                 },
                 {
-                    name: 'Samuele',
+                    name: 'Samantha',
                     avatar: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/7b6f5523240799.5632176f43717.png',
                     visible: true,
                     messages: [
@@ -89,7 +90,10 @@ var app = new Vue(
             ]
         },
         methods: {
-
+            // clicco sull'amico per vedere la chat
+            clickFriend(index) {
+                this.contactFriend = index;
+            }
 
         }
 

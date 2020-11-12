@@ -9,6 +9,7 @@
     <body>
             <div id="root">
                 <div class="container">
+                    <!-- sinistra -->
                     <div class="left">
                         <ul class="lista-messaggi">
                             <li>
@@ -18,25 +19,17 @@
                                 <i class="fas fa-comment-alt"></i>
                                 <i class="fas fa-ellipsis-v"></i>
                             </li>
-                            <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
-                            <li>
-                                <img src="https://www.shareicon.net/data/256x256/2016/09/15/829471_user_512x512.png" alt="">
-                                ciao
-                            </li>
-                            <li>
-                                <img src="https://www.shareicon.net/data/256x256/2016/09/15/829446_user_512x512.png" alt="">
-                                ciao
-                            </li>
-                            <li>
-                                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/7b6f5523240799.5632176f43717.png" alt="">
-                                ciao
-                            </li>
-                            <li>
-                                <img src="https://www.presidia.it/wp-content/uploads/2015/09/flat-faces-icons-circle-16.png" alt="">
-                                ciao
-                            </li>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <div class="friends-list" v-for="(friend, indice) in contacts">
+                                <li>
+                                    <img :src="friend.avatar" alt="avatar">
+                                    ciao
+                                </li>
+                            </div>
+
                         </ul>
                     </div>
+                    <!-- destra -->
                     <div class="right">
                         <div class="right-top">
                             <img src="https://www.shareicon.net/data/256x256/2016/09/15/829471_user_512x512.png" alt="">

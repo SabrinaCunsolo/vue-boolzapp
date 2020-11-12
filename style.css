@@ -18,6 +18,11 @@ body {
     background-color: yellow;
 }
 
+.container i {
+    color: lightgrey;
+    font-size: 23px;
+}
+
 /* parte destra */
 .container .left {
     width: 35%;
@@ -32,6 +37,8 @@ body {
     border-bottom: 1px solid grey;
     padding: 20px;
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 .lista-messaggi input{
@@ -44,6 +51,12 @@ body {
 
 .lista-messaggi img{
     max-width: 50px;
+    float: left;
+}
+
+.lista-messaggi i {
+    padding: 20 8px;
+    float: right;
 }
 
 /* parte sinistra */
@@ -64,6 +77,13 @@ body {
 
 .right-top img {
     max-width: 50px;
+    float: left;
+    margin: 10px;
+}
+
+.right-top i {
+    float: right;
+    padding: 20 8px;
 }
 
 .right-middle {
@@ -74,6 +94,9 @@ body {
 .right-bottom {
     height: 10%;
     background-color: grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .right-bottom input {
@@ -85,8 +108,12 @@ body {
     border: none;
 }
 
+.right-bottom i {
+    margin: 20px;
+}
+
 .messaggi {
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 10px;
     clear: both;
     border-radius: 10px;

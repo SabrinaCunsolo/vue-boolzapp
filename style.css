@@ -13,15 +13,28 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+img {
+    max-width: 50px;
+    float: left;
+}
+
 .container {
     width: 1000px;
     height: 700px;
-    background-color: yellow;
+    /* background-color: yellow; */
+    display: flex;
+}
+
+.container::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 .container i {
     color: lightgrey;
-    font-size: 23px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /* parte destra */
@@ -41,23 +54,34 @@ body {
     display: flex;
     align-items: center;
 }
+.my-avatar-left {
+    width: 50%;
+    float: left;
+}
+.my-icon-left {
+    width: 50%;
+    float: right;
+}
 
 /* da sistemare dopo:hover su img */
 /* .lista-messaggi li :hover {
     background-color: grey;
 } */
-
-.lista-messaggi input{
-    width: 100%;
+/* sistemare search */
+/* .lista-messaggi i .fa-search{
+    width: 15%;
     height: 40px;
     padding: 10px;
     border-radius: 5px;
     border: none;
-}
+} */
 
-.lista-messaggi img{
-    max-width: 50px;
-    float: left;
+.lista-messaggi input{
+    width: 85%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
 }
 
 .lista-messaggi i {
@@ -69,37 +93,71 @@ body {
 .container .right {
     width: 65%;
     height: 100%;
-    background-color: lightblue;
-    float: left;
     display: flex;
-    justify-content:flex-start;
     flex-direction: column;
+    background-color: lightblue;
 }
 
 .right-top {
-    height: 10%;
+    height: 70px;
+    width: 100%;
     background-color: grey;
+    padding: 0 10px;
+    border-bottom: 1px solid lightgrey;
 }
 
-.right-top img {
-    max-width: 50px;
+.right-top .img-friend-right{
+    max-width: 50%;
     float: left;
-    margin: 10px;
+    padding-left: 15px;
+    /* background-color: red; */
 }
 
-.right-top i {
+.right-top .img-friend-right img{
+    padding-right: 5px;
+}
+
+.right-top .icone-right{
+    max-width: 50%;
     float: right;
-    padding: 20 8px;
+    /* background-color: yellow; */
+    padding-right: 15px;
+}
+
+.right-top .icone-right i{
+    padding-left: 8px;
 }
 
 .right-middle {
-    height: 80%;
+    height: calc(100% - 140px);
+    padding: 20px;
     background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
     background-size: cover;
+    float: left;
+    overflow-y: auto;
+}
+
+
+.received {
+    background-color: white;
+    float: left;
+    padding: 15px;
+    margin: 5px 10px 5px 10px;
+    clear: both;
+    border-radius: 10px;
+}
+
+.sent {
+    background-color: lightgreen;
+    float: right;
+    padding: 15px;
+    margin: 5px 10px 5px 10px;
+    clear: both;
+    border-radius: 10px;
 }
 
 .right-bottom {
-    height: 10%;
+    height: 70px;
     background-color: grey;
     display: flex;
     justify-content: space-around;
@@ -117,21 +175,4 @@ body {
 
 .right-bottom i {
     margin: 20px;
-}
-
-.messaggi {
-    padding: 15px;
-    margin-bottom: 10px;
-    clear: both;
-    border-radius: 10px;
-}
-
-.received {
-    background-color: white;
-    float: left;
-}
-
-.sent {
-    background-color: lightgreen;
-    float: right;
 }

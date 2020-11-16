@@ -3,6 +3,8 @@ var app = new Vue(
         el: '#root',
         data: {
             contactFriend: 0,
+            nuovoMsg: '',
+            risposta: 'ok',
             contacts: [
                 {
                     name: 'Michela',
@@ -93,7 +95,27 @@ var app = new Vue(
             // clicco sull'amico per vedere la chat
             clickFriend(index) {
                 this.contactFriend = index;
-            }
+            },
+            // devo inserire un nuovo messaggio + enter
+            inserisciMsg(nuovoMsg) {
+                this.contacts[this.contactFriend].messages.push({
+                    date:'',
+                    message: nuovoMsg,
+                    status: 'sent'
+                });
+
+                if (nuovoMsg != '') {
+                    this.nuovoMsg = '';
+                    
+                    setTimeout(() => {
+                        this.contacts[this.contactFriend].messages.push({
+                            date:'',
+                            message: this.risposta,
+                            status: 'received'
+                        });
+                    }, 1000)
+                }
+            },
 
         }
 

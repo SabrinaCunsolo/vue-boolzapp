@@ -64,7 +64,7 @@
                         <!-- right bottom -->
                         <div class="right-bottom">
                             <i class="far fa-smile"></i>
-                            <input type="text" name="" value="" placeholder="Scrivi un messaggio">
+                            <input v-on:keyup.enter="inserisciMsg(nuovoMsg)" v-model="nuovoMsg" type="text" placeholder="Scrivi un messaggio">
                             <i class="fas fa-microphone"></i>
                         </div>
                     </div>

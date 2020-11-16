@@ -49,7 +49,7 @@ img {
     width: 100%;
     height: 70px;
     border-bottom: 1px solid grey;
-    padding: 20px;
+    padding: 10px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -87,6 +87,20 @@ img {
 .lista-messaggi i {
     padding: 20 8px;
     float: right;
+}
+
+.nomeAmico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.anteprimaMsg{
+    font-size: 12px;
+    color: grey;
+    width: 200px;
+    padding-top: 5px;
 }
 
 /* parte sinistra */
@@ -136,7 +150,6 @@ img {
     padding: 20px;
     background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
     background-size: cover;
-    /* float: left; */
     overflow-y: auto;
 }
 
@@ -163,11 +176,9 @@ img {
     height: 70px;
     width: 100%;
     background-color: grey;
-    /* padding: 0 10px; */
     border-bottom: 1px solid lightgrey;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
 }
 
 .right-bottom input {

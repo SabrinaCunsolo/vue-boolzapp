@@ -106,7 +106,7 @@ var app = new Vue(
 
                 if (nuovoMsg != '') {
                     this.nuovoMsg = '';
-                    
+
                     setTimeout(() => {
                         this.contacts[this.contactFriend].messages.push({
                             date:'',

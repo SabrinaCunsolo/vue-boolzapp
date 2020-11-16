@@ -29,14 +29,19 @@
 
                             </li>
                             <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input  type="text" placeholder="Cerca o inizia una nuova chat">
                             <div class="friends-list" v-for="(friend, index) in contacts" @click="clickFriend(index)">
                                 <li>
                                     <a href="#">
                                         <img :src="friend.avatar" alt="avatar">
                                     </a>
+                                <div class="nomeAmico">
+                                    <h4>{{ friend.name }}<h4>
+                                    <p class="anteprimaMsg">
+                                        {{ friend.messages[friend.messages.length -1].message}}
+                                    </p>
+                                </div>
                                 </li>
-                                <h4>{{ friend.name }}<h4>
                             </div>
                         </ul>
                     </div>

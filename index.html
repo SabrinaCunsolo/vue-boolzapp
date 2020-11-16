@@ -54,20 +54,20 @@
                                 <i class="fas fa-paperclip"></i>
                                 <i class="fas fa-ellipsis-v"></i>
                             </div>
-                            <!-- right middle -->
+                        <!-- right middle -->
                         </div>
                         <div class="right-middle">
                             <div class="messaggi" v-for="dati in contacts[contactFriend].messages">
                                 <div :class="dati.status">
                             {{ dati.message}} </div>
                         </div>
-                        <!-- right bottom -->
+                        </div>
+                            <!-- right bottom -->
                         <div class="right-bottom">
                             <i class="far fa-smile"></i>
                             <input v-on:keyup.enter="inserisciMsg(nuovoMsg)" v-model="nuovoMsg" type="text" placeholder="Scrivi un messaggio">
                             <i class="fas fa-microphone"></i>
                         </div>
-                    </div>
                 </div>
             </div>
 

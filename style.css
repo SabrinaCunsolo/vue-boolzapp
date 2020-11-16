@@ -98,9 +98,12 @@ img {
     background-color: lightblue;
 }
 
-.right-top {
+.container .right-top {
     height: 70px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: grey;
     padding: 0 10px;
     border-bottom: 1px solid lightgrey;
@@ -128,12 +131,12 @@ img {
     padding-left: 8px;
 }
 
-.right-middle {
+.container .right-middle {
     height: calc(100% - 140px);
     padding: 20px;
     background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
     background-size: cover;
-    float: left;
+    /* float: left; */
     overflow-y: auto;
 }
 
@@ -156,12 +159,15 @@ img {
     border-radius: 10px;
 }
 
-.right-bottom {
+.container .right-bottom {
     height: 70px;
+    width: 100%;
     background-color: grey;
+    /* padding: 0 10px; */
+    border-bottom: 1px solid lightgrey;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    /* align-items: center; */
 }
 
 .right-bottom input {

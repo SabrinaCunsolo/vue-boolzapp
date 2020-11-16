@@ -14,7 +14,6 @@
                 <div class="container">
                     <!-- sinistra -->
                     <div class="left">
-
                         <ul class="lista-messaggi">
                             <li>
                                 <!-- mio profilo -->
@@ -27,8 +26,11 @@
                                         <i class="fas fa-ellipsis-v"></i>
                                     </div>
                             </li>
-                            <i class="fas fa-search"></i>
-                            <input  type="text" placeholder="Cerca o inizia una nuova chat">
+                            <div class="searchFriend">
+                                <i class="fas fa-search"></i>
+                                <input class="searchInput" type="text" placeholder="Cerca o inizia una nuova chat">
+                            </div>
+
                             <div class="friends-list" v-for="(friend, index) in contacts" @click="clickFriend(index)">
                                 <li>
                                     <a href="#">

@@ -5,6 +5,7 @@ var app = new Vue(
             contactFriend: 0,
             nuovoMsg: '',
             risposta: 'ok',
+            inserisciNome: '',
             contacts: [
                 {
                     name: 'Michela',
@@ -117,6 +118,18 @@ var app = new Vue(
                 }
             },
 
+            ricercaNome() {
+                this.contacts.forEach((contact, i) => {
+
+                    if (contact.name.toLowerCase().includes(this.inserisciNome)) {
+                        contact.visible = true;
+                        console.log(inserisciNome);
+                    } else {
+                        contact.visible = false;
+                        console.log(inserisciNome);
+                    }
+                });
+            },
         }
 
     }
